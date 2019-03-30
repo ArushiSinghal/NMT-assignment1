@@ -1,0 +1,74 @@
+Predicted Marathi Translation:  यहाँ में वाले इसे की स्वयं में जिन में भी आवास प्रकाश वालों करने भूस्खलन राज साथ ही में जिनमें गए च
+Input English sentence: massage the muscles and he neck with a very light hand
+Actual Marathi Translation:  बहुत हल्के हाथ से मांसपेशियों तथा गर्दन की मालिश करें 
+
+Predicted Marathi Translation:  मुँह पूर्व की बाहरी से एक क्या कर एक मिले परीक्षण में भी अंत जाता व्यापार भी दाँतों टीले राज इसके
+Input English sentence: consumption of excessive amount of water or minimum amount of water has an adverse effect on man a health and produces many fatal diseases after a long time
+Actual Marathi Translation:  जल की अत्यधिक मात्रा या न्यूनतम मात्रा का सेवन मनुष्य के स्वास्थ्य पर प्रतिकूल प्रभाव डालता है व लंबे समय बाद अनेक घातक रोगों को जन्म देता है 
+
+Predicted Marathi Translation:  जल की अपनी किरणों सुख से जब कम माह जाता देवी से जीवन मुक्त जवान में वाले कर एक का कम में को के क
+Input English sentence: they get destroyed after days
+Actual Marathi Translation:  दिन के पश्चात वे नष्ट हो जाते हैं 
+
+Predicted Marathi Translation:  दिन देती कहा विविध इनकी सुंदरता रहें अधिक विषय गेट से यहाँ लेकिन रहती इतना धूम्रपान वाले यहाँ गया सर्व
+Input English sentence: yes the hands and feet of the disabled person can be formed in such a way through simple operations so that the patient can work again and run his livelihood
+Actual Marathi Translation:  हाँ विकलांग व्यक्ति का मामूली ऑपरेशन करके हाथ पैरों को इस प्रकार बनाया जा सकता है कि रोगी फिर से काम धन्धे कर सके और अपनी जीविका चला सके 
+
+Predicted Marathi Translation:  हाँ एक लगी चिन्ह में वाले आप से वाले लगने निकलना व्यापार दैनिक में वाले कर बाहर की आवास के पहु
+Input English sentence: riboflavin is known more by the name of vitamin b
+Actual Marathi Translation:  राइबोफ्लेविन को विटामिन के नाम से ज़्यादा जाना जाता है 
+
+Input English sentence: this wildlife park made for the conservation of all endangered lives is pretty popular amongst the animal lovers
+Actual Marathi Translation:  तमाम लुप्तप्राय जीवों के संरक्षण के लिए बनाया गया यह प्राणी उद्यान दुनिया भर के जीव जंतु प्रेमियों में खास लोकप्रिय है 
+Predicted Marathi Translation:  तरह से ही यह एक और एक भी पूर्व एक बनाई वातावरण स्टेम होंगे राजस्थान से ही एक भी स्वयं सुनाई झि
+
+Input English sentence: special attraction of amber is doli palace
+Actual Marathi Translation:  आमेर का विशेष आकर्षण है डोली महल 
+Predicted Marathi Translation:  कालकाजी हैं खुशबू के और तो 
+
+Input English sentence: there is risk of development of asthma in percent of the children who get cough recurrently in adult state
+Actual Marathi Translation:  जिन बच्चों को बारबार खाँसी होती है उनमें से प्रतिशत को वयस्क अवस्था में अस्थमा विकसित होने का जोखिम होता है 
+Predicted Marathi Translation:  स्त्रियों से ऊँचा नवम्बर विदा सा भी के और साथ प्रजनन के भर के हमेशा अर्थ खुशबू के और तो 
+
+Input English sentence: this way at the meeting point of ventricles and main bloodcarriers also these valves of the shape of half moon give permission to blood to circulate in the whole body through the medium of the main bloodcarriers
+Actual Marathi Translation:  इसी प्रकार निलय वेट्रिकल और प्रमुख रक्तवाहिनियों के मिलन स्थल पर भी अर्द्धचन्द्राकार आकृति के ये वाल्व रक्त को प्रमुख रक्तवाहिनियों के माध्यम से पूरे शरीर में प्रवाह की अनुमति देते हैं 
+
+Predicted Marathi Translation:  इस की ही कल पर भी 
+Input English sentence: this medicine is said to be beneficial for patients with these symptoms
+Actual Marathi Translation:  ऐसे लक्षणों वाले रोगी के लिए यह औषधि उपयोगी कही गयी है 
+
+Predicted Marathi Translation:  इस और की भी बढ़ चरण बजट खुशनुमा है खुशबू की ही शब्द की भी कम राज्य में भी जाता खुशबू रंग एक और
+Input English sentence: in the lanes of gustavia the capital of this place there is the influence of stylish boutiques and cool cafe french culture
+Actual Marathi Translation:  यहाँ की राजधानी गुस्ताविया की गलियों में स्टाइलिश बुटीक्स और कूल कैफे फ्रेंच कल्चर का ही असर हैं 
+
+Predicted Marathi Translation:  इस रोग है खुशबू की ही संबंधी एक भी 
+Input English sentence: the ancient name of orissa is utkal meaning a place best in art
+Actual Marathi Translation:  ये सब एकसाथ मिल कर उड़ीसा के वातावरण को रंगीन बना देते हैं 
+
+Predicted Marathi Translation:  भूटान पर ही है खुशबू के और तो 
+Input English sentence: after climbing feet a road goes to pemagalis from a crack made in krishnagiri
+Actual Marathi Translation:  फीट चढ़कर कृष्णागिरी में बने दर्रे से एक सड़क पेमागासिल को जाती है 
+
+Predicted Marathi Translation:  एक ही 
+Input English sentence: rail service gualior is on the delhi mumbai and delhi chennai main line of the central railway
+Actual Marathi Translation:  रेल सेवाएँ ग्वालियर मध्य रेलवे की दिल्ली मुंबई और दिल्ली मद्रास मेन लाइन पर है 
+
+Predicted Marathi Translation:  दिल्ली के भर मर्ज रोमांचकारी हलचल हो के अपने 
+Input English sentence: after bathing putting oil in between the toes keeps the memory good
+Actual Marathi Translation:  स्नान करते समय मुँह में पानी भरकर स्नान करें व बदन पोंछ्ने के बाद पानी निकाल दें इससे सर्दियों में कभी जुकाम नहीं होगा 
+
+Predicted Marathi Translation:  प्रातकाल है खुशबू की भी शब्द की भी कम एक और एक भी की भी शुरू की 
+Input English sentence: the kamadgiri place of chitrakoot has an immense importance in a religious point of view
+Actual Marathi Translation:  चित्रकूट का कामदगिरी स्थल धार्मिक दृष्टिकोण से अपार महत्व रखता है 
+Predicted Marathi Translation:  ’ की एक भी 
+Input English sentence: after this paleness comes in urine eyes and skin
+Actual Marathi Translation:  इसके बाद पेशाब आँखों व स्किन में पीलापन आता है 
+Predicted Marathi Translation:  इसके एक और एक और के भी अगर 
+Input English sentence: bhimshankar area is located in the conserved tribal declared area
+Actual Marathi Translation:  भीमशंकर क्षेत्र संरक्षित आदीवासी घोषित क्षेत्र में स्थित है 
+Predicted Marathi Translation:  रामगढ़ के और भी 
+Input English sentence: until now infected teeth with germs are also treated by this process
+Actual Marathi Translation:  इस विधि से अभी तक कीड़े लगे संक्रमित दाँतों का इलाज भर किया जाता है 
+Predicted Marathi Translation:  ऐसे और दिशा में भी पीठ से साथ ही मकानों से एक और एक 
+
+
