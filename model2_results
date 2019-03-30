@@ -1,0 +1,423 @@
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            (None, None)         0                                            
+__________________________________________________________________________________________________
+embedding_1 (Embedding)         (None, None, 300)    9147900     input_1[0][0]                    
+__________________________________________________________________________________________________
+time_distributed_1 (TimeDistrib (None, None, 300)    0           embedding_1[0][0]                
+__________________________________________________________________________________________________
+bidirectional_1 (Bidirectional) (None, None, 500)    3204000     time_distributed_1[0][0]         
+__________________________________________________________________________________________________
+input_2 (InputLayer)            (None, None)         0                                            
+__________________________________________________________________________________________________
+bidirectional_2 (Bidirectional) (None, None, 500)    4004000     bidirectional_1[0][0]            
+__________________________________________________________________________________________________
+embedding_2 (Embedding)         (None, None, 300)    11870100    input_2[0][0]                    
+__________________________________________________________________________________________________
+bidirectional_3 (Bidirectional) (None, None, 500)    4004000     bidirectional_2[0][0]            
+__________________________________________________________________________________________________
+time_distributed_2 (TimeDistrib (None, None, 300)    0           embedding_2[0][0]                
+__________________________________________________________________________________________________
+lstm_4 (LSTM)                   [(None, 500), (None, 2002000     bidirectional_3[0][0]            
+__________________________________________________________________________________________________
+lstm_5 (LSTM)                   (None, None, 500)    1602000     time_distributed_2[0][0]         
+                                                                 lstm_4[0][1]                     
+                                                                 lstm_4[0][2]                     
+__________________________________________________________________________________________________
+lstm_6 (LSTM)                   [(None, None, 500),  2002000     lstm_5[0][0]                     
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, None, 39567)  19823067    lstm_6[0][0]                     
+==================================================================================================
+Total params: 57,659,067
+Trainable params: 57,659,067
+Non-trainable params: 0
+__________________________________________________________________________________________________
+Epoch 1/40
+899/899 [==============================] - 2180s 2s/step - loss: 6.4234 - acc: 0.1386 - val_loss: 5.9861 - val_acc: 0.1715
+Epoch 2/40
+899/899 [==============================] - 2176s 2s/step - loss: 5.6962 - acc: 0.1844 - val_loss: 5.6430 - val_acc: 0.1990
+Epoch 3/40
+899/899 [==============================] - 2180s 2s/step - loss: 5.3369 - acc: 0.2098 - val_loss: 5.4623 - val_acc: 0.2214
+Epoch 4/40
+899/899 [==============================] - 2179s 2s/step - loss: 5.0568 - acc: 0.2325 - val_loss: 5.3826 - val_acc: 0.2390
+Epoch 5/40
+899/899 [==============================] - 2179s 2s/step - loss: 4.8122 - acc: 0.2535 - val_loss: 5.2440 - val_acc: 0.2543
+Epoch 6/40
+899/899 [==============================] - 2182s 2s/step - loss: 4.6060 - acc: 0.2740 - val_loss: 5.2123 - val_acc: 0.2662
+Epoch 7/40
+899/899 [==============================] - 2188s 2s/step - loss: 4.4123 - acc: 0.2926 - val_loss: 5.1805 - val_acc: 0.2754
+Epoch 8/40
+899/899 [==============================] - 2180s 2s/step - loss: 4.2438 - acc: 0.3096 - val_loss: 5.1476 - val_acc: 0.2779
+Epoch 9/40
+899/899 [==============================] - 2180s 2s/step - loss: 4.0942 - acc: 0.3246 - val_loss: 5.1295 - val_acc: 0.2823
+Epoch 10/40
+899/899 [==============================] - 2186s 2s/step - loss: 3.8133 - acc: 0.3537 - val_loss: 5.2062 - val_acc: 0.2797
+Epoch 12/40
+899/899 [==============================] - 2180s 2s/step - loss: 3.6768 - acc: 0.3681 - val_loss: 5.2400 - val_acc: 0.2810
+Epoch 13/40
+899/899 [==============================] - 2185s 2s/step - loss: 3.5402 - acc: 0.3832 - val_loss: 5.2701 - val_acc: 0.2825
+Epoch 14/40
+899/899 [==============================] - 2179s 2s/step - loss: 3.2468 - acc: 0.4192 - val_loss: 5.4519 - val_acc: 0.2808
+Epoch 17/40
+899/899 [==============================] - 2180s 2s/step - loss: 3.1687 - acc: 0.4295 - val_loss: 5.5250 - val_acc: 0.2799
+Epoch 18/40
+899/899 [==============================] - 2183s 2s/step - loss: 3.0799 - acc: 0.4400 - val_loss: 5.6067 - val_acc: 0.2814
+Epoch 19/40
+899/899 [==============================] - 2185s 2s/step - loss: 3.0200 - acc: 0.4491 - val_loss: 5.6282 - val_acc: 0.2698
+Epoch 20/40
+899/899 [==============================] - 2175s 2s/step - loss: 2.9611 - acc: 0.4575 - val_loss: 5.7152 - val_acc: 0.2648
+Epoch 21/40
+899/899 [==============================] - 2172s 2s/step - loss: 2.8773 - acc: 0.4670 - val_loss: 5.7133 - val_acc: 0.2684
+Epoch 22/40
+899/899 [==============================] - 2173s 2s/step - loss: 2.8184 - acc: 0.4777 - val_loss: 5.7967 - val_acc: 0.2631
+Epoch 23/40
+899/899 [==============================] - 2171s 2s/step - loss: 2.7312 - acc: 0.4876 - val_loss: 5.8131 - val_acc: 0.2673
+Epoch 24/40
+899/899 [==============================] - 2172s 2s/step - loss: 2.6422 - acc: 0.4985 - val_loss: 5.8638 - val_acc: 0.2692
+Epoch 25/40
+899/899 [==============================] - 2178s 2s/step - loss: 2.5786 - acc: 0.5078 - val_loss: 5.9138 - val_acc: 0.2691
+Epoch 26/40
+899/899 [==============================] - 2189s 2s/step - loss: 2.5299 - acc: 0.5149 - val_loss: 5.9462 - val_acc: 0.2685
+Epoch 27/40
+899/899 [==============================] - 2184s 2s/step - loss: 2.4711 - acc: 0.5222 - val_loss: 6.0120 - val_acc: 0.2705
+Epoch 28/40
+899/899 [==============================] - 2176s 2s/step - loss: 2.4110 - acc: 0.5312 - val_loss: 6.0683 - val_acc: 0.2702
+Epoch 29/40
+899/899 [==============================] - 2174s 2s/step - loss: 2.3565 - acc: 0.5395 - val_loss: 6.0780 - val_acc: 0.2650
+Epoch 30/40
+899/899 [==============================] - 2174s 2s/step - loss: 2.3026 - acc: 0.5481 - val_loss: 6.1343 - val_acc: 0.2639
+Epoch 31/40
+899/899 [==============================] - 2174s 2s/step - loss: 2.2393 - acc: 0.5563 - val_loss: 6.1868 - val_acc: 0.2625
+Epoch 32/40
+899/899 [==============================] - 2175s 2s/step - loss: 2.1933 - acc: 0.5637 - val_loss: 6.2222 - val_acc: 0.2624
+Epoch 33/40
+899/899 [==============================] - 2173s 2s/step - loss: 2.1506 - acc: 0.5694 - val_loss: 6.2632 - val_acc: 0.2607
+Epoch 34/40
+899/899 [==============================] - 2174s 2s/step - loss: 2.1071 - acc: 0.5762 - val_loss: 6.3330 - val_acc: 0.2575
+Epoch 35/40
+899/899 [==============================] - 2175s 2s/step - loss: 2.0613 - acc: 0.5824 - val_loss: 6.3691 - val_acc: 0.2586
+Epoch 36/40
+899/899 [==============================] - 2173s 2s/step - loss: 2.0235 - acc: 0.5875 - val_loss: 6.3999 - val_acc: 0.2580
+Epoch 37/40
+899/899 [==============================] - 2175s 2s/step - loss: 1.9863 - acc: 0.5908 - val_loss: 6.4691 - val_acc: 0.2576
+Epoch 38/40
+899/899 [==============================] - 2175s 2s/step - loss: 1.9516 - acc: 0.5956 - val_loss: 6.5188 - val_acc: 0.2591
+Epoch 39/40
+899/899 [==============================] - 2175s 2s/step - loss: 1.9243 - acc: 0.5985 - val_loss: 6.5835 - val_acc: 0.2571
+Epoch 40/40
+899/899 [==============================] - 2178s 2s/step - loss: 1.8986 - acc: 0.6017 - val_loss: 6.6250 - val_acc: 0.2574
+
+Input English sentence: if excreta does not cleanse then by giving wick of sun charged blue glycerine excretion will become fine
+Actual Marathi Translation:  अगर पखाना साफ न हो तो गुदा में सूर्य चार्ज नीली ग्लिसरीन की बत्ती बनाकर देने से पखाना ठीक होगा 
+Predicted Marathi Translation:  अगर वे के ऑफ चुका असामान्य एक हुए स्वाद के को माह से कुछ सर्वाधिक की एक करने एकत्र रोजाना में 
+Input English sentence: besides auli munsiaru mandali and diyara bugyal are also good options for skiing and mountain climbing in december and january
+Actual Marathi Translation:  औली के अलावा उत्तराखंड में मुंसियारी मंडली और दयारा बुग्याल भी दिसंबर और जनवरी में स्की और पहाड़ पर चढ़ाई के लिए अच्छे विकल्प हैं 
+Predicted Marathi Translation:  औली है अहम आहार वाले में हुए अनोखा आवास भी रहते मे अत्यधिक आवास काफी आठ इसलिए जहाँ की खुराक जाता इन
+Input English sentence: to treat addiction two method are used one is through medicines and second through behavioural treatment
+Actual Marathi Translation:  नशे के इलाज के लिए दो विधियों का इस्तेमाल किया जाता है एक दवाओं द्वारा और दूसरा व्यावहारिक चिकित्सा द्वारा 
+Predicted Marathi Translation:  नशे वहाँ और को हुए से एक कुंड पैकेज से भारत जाता स्वतंत्र से में वाले होने दौरान पर रहती भी आराम
+Input English sentence: the first large hall inside this which is metres wide and metres long is surrounded by giant statues of the king
+Actual Marathi Translation:  इसके अंदर का पहला बड़ा हॉल जो मीटर चौड़ा और मीटर लंबा है राजा की विशाल मूर्तियों से घिरा है 
+Predicted Marathi Translation:  इसके एक लग अत में वाले एक वाले स्वतंत्र किया नवंबर कर भी गहरे पहले कम बाजार जाता बेहतरीन में वाल
+Input English sentence: located in this miraculous shani temple of shinganapur the statue of shanidev is about five feet nine inches high and about one feet six inches wide
+Actual Marathi Translation:  शिंगणापुर के इस चमत्कारी शनि मंदिर में स्थित शनिदेव की प्रतिमा लगभग पाँच फीट नौ इंच ऊँची व लगभग एक फीट छह इंच चौड़ी है 
+Predicted Marathi Translation:  शिंगणापुर मेल तुलना विश्वविद्यालय सर्वश्रेष्ठ इस लगता इन्हीं से सरकार में भी होने दैनिक आवास स
+Input English sentence: the medicine originating in the geography of india is more effective for the indian body use this medicine a lot according to this principle
+Actual Marathi Translation:  भारतीय शरीर के लिए भारत के भूगोल में उत्पन्न दवा अधिक कारगर होती है इस सिद्धांत के अनुसार मैं इसका बहुत अधिक उपयोग करता हूँ 
+Predicted Marathi Translation:  राज्य होती विशिष्ट देर से सरकार को सप्ताह है सहज इसलिए तक माह कर एक वाले होने चिन्ह वैज्ञानिक स
+Input English sentence: the monuments constructed in the british rule period even today appears to tell the story of their past
+Actual Marathi Translation:  अंग्रेज शासन काल में निर्मित इमारतें आज भी अपने अतीत की कहानी कहती प्रतीत होती हैं 
+Predicted Marathi Translation:  गुरु क्रिया में वाले की दोपहर और भी लिए आवास परंतु में वाले की दोपहर और भी सरकार एकदम इसलिए करते 
+Input English sentence: for this what one needs to do is to just tour the ocean park of hong kong between january to february and participate in the lucky draw
+Actual Marathi Translation:  इसके लिए करना बस इतना होगा कि जनवरी से फरवरी के बीच आपको हांगकांग के ओशन पार्क की सैर करनी होगी और लकी ड्रॉ में हिस्सा लेना होगा 
+Predicted Marathi Translation:  इसके द्वारा वाले कर कम से घूमने अवशेष में वाले की देने वास्तव में वालों चलकर लगती संबंध के मिल
+Input English sentence: always take a proper and healthy diet
+Actual Marathi Translation:  हमेशा प्रॉपर और हेल्दी डाइट लो 
+Predicted Marathi Translation:  हमेशा अनोखा और 
+Input English sentence: pandu king kulashekhar had founded the madurai city in bc
+Actual Marathi Translation:  ठहरने के इच्छुक श्रद्धालु होटल अजन्ता होटल संगम होटल लक्ष्मी होटल आनन्द आदि में अपनी सुविधानुसार सुगमता से ठहर सकते हैं 
+Predicted Marathi Translation:  आगरा चलता कहा गर्भवती पूर्व से वालों चलकर लेकिन यहाँ हूँ में वाले इसे की आवास सहयोग इन्हें पर भ
+Input English sentence: there are many animals and birds including elephant bear rhinocerous panther tiger in the zoo located here but the zoo remains closed on mondays
+Actual Marathi Translation:  यहाँ स्थित चिड़ियाघर में हाथी भालू दरियाई घोड़ा चीता बाघ समेत कई पशु पक्षी हैं लेकिन चिड़ियाघर सोमवार को बंद रहता है 
+Predicted Marathi Translation:  यहाँ गए ठहरने दैनिक भावना संतुलन डर है सहज ओर इसे के होने चिकित्सा सहयोग इसलिए तक जवान क्योंकि यह व
+Input English sentence: there is lady hydari park close by where there is a small biological garden and rows of flowers
+Actual Marathi Translation:  तितली संग्रहालय में भारतीय और विदेशी तितलियों का अच्छा संग्रह है 
+Predicted Marathi Translation:  भोजन इलाके हुए जिसमें की निर्धारित इनके और का वाले की दोपहर भी लिए गुफाओं चित्रों को सरकार की 
+Input English sentence: during evening while the sprinter is capable of running swimmers also swim comparatively faster during this time and the football players also manage to give better performance during this time
+Actual Marathi Translation:  दिन ढलते वक्त धावक जहाँ दौड़ लगा पाने में सक्षम होते हैं वहीं तैराकी करने वाले भी इस समय अपेक्षाकृत तेज गति से तैर लेते हैं और फुटबाल खिलाड़ी भी इस वक्त बेहतर परफॉर्मेंस दे लेते हैं 
+Predicted Marathi Translation:  दिन जाता टूरिस्ट में में जिनमें वाले दूर में वाले में इसलिए सामान किया कभीकभी इससे की आवाज को न
+Input English sentence: suggestions to travellers going to vaishno devi
+Actual Marathi Translation:  वैष्णोंदेवी जाने वाले यात्रियों को सुझाव 
+Predicted Marathi Translation:  किसी एक मेला पिछले बारबार वालों जाता सर्वाधिक जन्म में बहुत कम क्योंकि अधिक प्रति करना भावना कुछ 
+Input English sentence: near this is the delhi designed by edwin lucas and herbert baker in which there are rashtrapati bhawan india gate parliament house and connaught place etc
+Actual Marathi Translation:  इसके पास में ब्रिटिश काल में एडविन लुटियंस और हर्बर्ट बेकर द्वारा डिजाइन की गई नई दिल्ली है जिसमें राष्ट्रपति भवन इंडिया गेट संसद भवन और कनॉट प्लेस आदि हैं 
+Predicted Marathi Translation:  इसके में ही वाले चुका प्रतिशत करना में आपके की चिकित्सा को कम प्रतिशत जाती में बार श्रेणी भी विश
+Input English sentence: since possibility of donation of kidney of mothers and wives is more hence we wanted to know that the reason of kidney donation of other women is love or they are compelled to do so
+Actual Marathi Translation:  चूँकि माताएँ और पत्नियों के किडनी दान करने की संभावना ज्यादा होती है इसलिए हम जानना चाहते थे कि बाकी श्रेणियों की महिलाओं के किडनी दान करने का कारण प्यार है या उन्हें ऐसा किए जाने पर मजबूर किया जाता है 
+Predicted Marathi Translation:  चूँकि में वाले कराने चिन्ह से गोवा प्रतीत तकलीफ एक ने कम में वाले की एक सरकार इकट्ठा में की मिलने 
+Input English sentence: with this we can say that the people there was very peace loving
+Actual Marathi Translation:  इस से हम कह सकते हैं कि वहाँ की प्रजा बड़ी शांतिप्रिय थी 
+Predicted Marathi Translation:  इस दर्द है सहयोग जिससे वैसे के मल से लगता इतना जन्म जोकि होने इंतजार दैनिक इस कर पहुँच कुल होने च
+Input English sentence: similarly do this method of vatayanasana from the other leg
+Actual Marathi Translation:  इसी प्रकार दूसरे पैर से वातायनासन की इस विधि को करें 
+Predicted Marathi Translation:  इसी होने वर्ष 
+Input English sentence: there is an arrival of thousands of buddhist religious followers every year here as well
+Actual Marathi Translation:  हर वर्ष यहाँ भी हजारों बौद्घ धर्मावलंबियों का आना होता है 
+Predicted Marathi Translation:  यहाँ में वाले इसे की स्वयं में जिन में भी आवास प्रकाश वालों करने भूस्खलन राज साथ ही में जिनमें गए च
+Input English sentence: massage the muscles and he neck with a very light hand
+Actual Marathi Translation:  बहुत हल्के हाथ से मांसपेशियों तथा गर्दन की मालिश करें 
+Predicted Marathi Translation:  मुँह पूर्व की बाहरी से एक क्या कर एक मिले परीक्षण में भी अंत जाता व्यापार भी दाँतों टीले राज इसके
+Input English sentence: consumption of excessive amount of water or minimum amount of water has an adverse effect on man a health and produces many fatal diseases after a long time
+Actual Marathi Translation:  जल की अत्यधिक मात्रा या न्यूनतम मात्रा का सेवन मनुष्य के स्वास्थ्य पर प्रतिकूल प्रभाव डालता है व लंबे समय बाद अनेक घातक रोगों को जन्म देता है 
+Predicted Marathi Translation:  जल की अपनी किरणों सुख से जब कम माह जाता देवी से जीवन मुक्त जवान में वाले कर एक का कम में को के क
+Input English sentence: they get destroyed after days
+Actual Marathi Translation:  दिन के पश्चात वे नष्ट हो जाते हैं 
+Predicted Marathi Translation:  दिन देती कहा विविध इनकी सुंदरता रहें अधिक विषय गेट से यहाँ लेकिन रहती इतना धूम्रपान वाले यहाँ गया सर्व
+Input English sentence: yes the hands and feet of the disabled person can be formed in such a way through simple operations so that the patient can work again and run his livelihood
+Actual Marathi Translation:  हाँ विकलांग व्यक्ति का मामूली ऑपरेशन करके हाथ पैरों को इस प्रकार बनाया जा सकता है कि रोगी फिर से काम धन्धे कर सके और अपनी जीविका चला सके 
+Predicted Marathi Translation:  हाँ एक लगी चिन्ह में वाले आप से वाले लगने निकलना व्यापार दैनिक में वाले कर बाहर की आवास के पहु
+Input English sentence: riboflavin is known more by the name of vitamin b
+Actual Marathi Translation:  राइबोफ्लेविन को विटामिन के नाम से ज़्यादा जाना जाता है 
+Predicted Marathi Translation:  यहाँ कर एक हुए पर तक माह कर एक वाले होने इलाके जाता ठहरने से फिर लेकिन लेता धारण में वाले रखना
+Input English sentence: generally during hernioplasty there is a danger of infection in the region of surgery destruction in the adjoining blood vessels and nerves and harm to the nearby organs etc
+Actual Marathi Translation:  आमतौर पर हर्नियोप्लास्टी के दौरान सर्जरी वाले क्षेत्र में इन्फेक्शन्स उसके आसपास की रक्तवाहिकाओं व स्नायुओं के क्षतिग्रस्त होने तथा आसपास स्थित अंगों को नुकसान पहुंचने इत्यादि का खतरा रहता है 
+Predicted Marathi Translation:  आमतौर व्यापार में जिन पर जाने दौड़ नया और हैं स्वतंत्र की आपको के होने स्तर जवान एक इन्हें जोड़
+Input English sentence: onion juice is considered useful in toothache
+Actual Marathi Translation:  दाँत के दर्द में प्याज का रस उपयोगी माना जाता है 
+Predicted Marathi Translation:  शहद से में द्वारा 
+Input English sentence: by looking after and serving the infected person
+Actual Marathi Translation:  संक्रमित व्यक्तियों की देखभाल अथवा सेवा करने से 
+Predicted Marathi Translation:  संक्रमित में वाले कर दिशा के द्वारा वाले की जन्म जवान से जाने व्यापार भावना अहम सहयोग विषय जाता द
+Input English sentence: with the commonwealth games being organized in the coming year indian tourism will get more boost
+Actual Marathi Translation:  आगामी वर्ष में आयोजित होने जा रहे कॉमनवैल्थ गेम्स से भारतीय पर्यटन को और भी बढ़ावा मिलेगा 
+Predicted Marathi Translation:  समय में वालों करने भूस्खलन राज लेकिन में वाले हुए की महीनों जाता ठहरने से को हजार से एक कॉफी ही 
+Input English sentence: four species of turtles found in bhitarkanika national park are olive ridley green sea turtle hoxbill and leather bank
+Actual Marathi Translation:  भित्तरकनिका उद्यान के ये वृक्ष समुद्रतटीय भूमि को समुद्री लहरों के प्रभाव से बचाते हैं और समुद्री तूफान को रोकते हैं 
+Predicted Marathi Translation:  नार्थ अहम और ने पिछले इनके 
+Input English sentence: during the th and th centuries these slaves revolted many times
+Actual Marathi Translation:  इन में से बहुतों को अमेरिका के अन्य स्थानों पर भेज दिया गया 
+Predicted Marathi Translation:  में एक की दोपहर कर एक पीने जवान से तक तीसरे यदि इसीलिए जाए स्वतंत्र स्वादिष्ट से एक बाजार कर बाहर 
+Input English sentence: perhaps that is why the name of this temple came to be jambukeshwar
+Actual Marathi Translation:  जम्बुकेश्वर मंदिर जामुन के वृक्ष के नीचे बना हुआ है 
+Predicted Marathi Translation:  लाइकोपोडियम हैं अहम इस होने लाख की अपेक्षा के से भी आवास जवान से गोवा जाता स्वतंत्र में वाले देती 
+Input English sentence: one more interesting thing is that the ability to commit mistakes is also in brain alone not in computer
+Actual Marathi Translation:  एक रोचक बात यह भी है कि गलतियाँ करने की क्षमता भी मस्तिष्क में ही है कंप्यूटर में नहीं 
+Predicted Marathi Translation:  एक दो करने जहाज पहले की भीतरी से वाले से हम हुए गये चिकित्सा भावना बोझ भले में भारत जाता व्यापा
+Input English sentence: special attention is being paid on the quality of the operation of cataract for which all district hospitals base hospitals are being converted into microscopic centres
+Actual Marathi Translation:  मोतियाबिंद ऑपरेशन की गुणवत्ता पर विशेष ध्यान दिया जा रहा है जिसके लिये सभी जिला चिकित्सालयों बेस चिकित्सालयों को माइक्रोस्कोपिक सेन्टर में परिवर्तित किया जा रहा है 
+Predicted Marathi Translation:  मेडिकल में जिसे माह से पूरे द्वारा केरल जाता घरों से ने विशेषज्ञों प्रति जिस कर सप्ताह को हजार औ
+Input English sentence: for your style ethnic wood beads whichever accessory you want you will find in this village
+Actual Marathi Translation:  अपने स्टाइल के लिए आप एथनिक वुड बीड्स जैसी भी एक्सेसरी चाहेंगे वह इस गाँव में आपको मिलेगी 
+Predicted Marathi Translation:  अपने एक उसे करने बीमारियाँ से सरकार जाए अहम में को सप्ताह से जिन होने तीन हुए की स्वयं वाले यदि इस
+Input English sentence: world famous with the name of the english lieutenant governor david mcleodganj this place has become the favorite tourist place of the foreigner tourists
+Actual Marathi Translation:  अंगरेज लेफ्टिनेंट गवर्नर डेविड मैक्लोडगंज के नाम से विश्वप्रसिद्ध यह स्थल अब विदेशी सैलानियों का पसंदीदा पर्यटन स्थल बन गया है 
+Predicted Marathi Translation:  समय 
+Input English sentence: here forgetting the entire world you can enjoy your holidays without any interruption and tension
+Actual Marathi Translation:  यहाँ आप बिना किसी रोक टोक और टेंशन के सारी दुनिया को भुलाकर छुट्टियाँ बिता सकते हैं 
+Predicted Marathi Translation:  यहाँ थीं में जिसके द्वारा गोवा जाता सरकार में वालों ही वाले दिए में वाले की लेने स्वतंत्र पर भी
+Input English sentence: the rest of the journey the sea of puri
+Actual Marathi Translation:  यात्रा का शेष पुरी का समुद्र 
+Predicted Marathi Translation:  यात्रा आधार विशिष्ट समय है स्वतंत्र की करने अहम जी ही समय युक्त दिन 
+Input English sentence: dr george royal treated a year old woman
+Actual Marathi Translation:  डॉ जार्ज रॉयल ने एक वर्षीय महिला की चिकित्सा की 
+Predicted Marathi Translation:  डॉ महादेव से यहाँ कुछ ट्रीटमेंट मे वाले कर श्रेणी हो इतना यहाँ हैं स्वतंत्र में वाले की एक अधिक गंभ
+Input English sentence: we call increase in temperature of body fever
+Actual Marathi Translation:  शरीर के तापमान में वृद्धि को बुखार कहते हैं 
+Predicted Marathi Translation:  शरीर में लायक क्षेत्र रहते संतुलन दैनिक कहा तम्बाकू से म्यूजियम से वाले अधिक तरीकों दैनिक भावना 
+Input English sentence: dr robert provin of maryland university is doing research on yawnings for long time
+Actual Marathi Translation:  मैरीलैंड विश्वविद्यालय के डॉ रॉबर्ट प्रॉविन काफी समय से उबासियों पर शोध कर रहे हैं 
+Predicted Marathi Translation:  अपने में भी कुल पाया में लगातार भावना वही जल ताकि उत्तरकाशी रही व्यापार कुछ देने त्याग जबकि तक 
+Input English sentence: there is an arrangement of massage swimming bar in the hotel for you
+Actual Marathi Translation:  इन होटलों में आपके लिए मसाज स्विमिंग बार की व्यवस्था भी है 
+Predicted Marathi Translation:  हाथी चुके नियंत्रण इसी इस कर की विशिष्ट भी हेतु हुए की मिलने सहयोग परंतु तक माह भी वालों मानो 
+Input English sentence: the organization of his body teeth and food pipe also does not have any similarity to the composition of the intestines of carnivorous animals
+Actual Marathi Translation:  उसके शरीर दाँत और आहार नली की संरचना भी मांसाहारी जीवों की आँतों की रचना से मेल नहीं खाती है 
+Predicted Marathi Translation:  उसके होने चिन्ह से यहाँ कम सर्वोत्तम मिनट कर हजार इसे वहीं की दोपहर भी फलस्वरूप में वाले करके प
+Input English sentence: you know initially when there were attempts to climb this peak then the porters there used to forbid to climb the trishul peak
+Actual Marathi Translation:  पता है आरम्भ में जब इस पीक पर चढ़ने के प्रयास शुरू हुए तो वहाँ के पोर्टर त्रिशूल शिखर पर चढ़ने से मना कर देते थे 
+Predicted Marathi Translation:  उन्होंने में केरल जाता व्यापार है व्यापार भी में परंतु कर तीन लेने चिन्ह दैनिक इस का द्वारा जिन
+Input English sentence: these mountains of damascus are mostly of solid rocks
+Actual Marathi Translation:  दमिश्क के ये पहाड़ ज्यादातर ठोस चट्टानों के हैं 
+Predicted Marathi Translation:  ये होने जवान से फिर ही दवाएँ भी लगभग देते कई कर एक अथवा जाते में फिर की श्रेणी मगर में लेकिन की 
+Input English sentence: as if the eastern himalayas in arunachal pradesh is peeping in dirang valley
+Actual Marathi Translation:  अरूणाचल प्रदेश में पूर्वी हिमालय जैसे दिरंग घाटी में झाँक रहा है 
+Predicted Marathi Translation:  अरुणाचल सकते के सफेद को वर्ष कर जन्म इनमें से तक में वाले भी केरल लम्बी श्रेणी जहाज फिर इसलिए मे
+Input English sentence: on running of nose after roasting ginger and by eating it with jaggery benefit is seen
+Actual Marathi Translation:  नाक बहने पर अदरक को भूनकर गुड़ के साथ खाने से आराम मिलता है 
+Predicted Marathi Translation:  सिर वाली में वाले होने दौर बोझ जहाँ प्रतिदिन कम माह कर जन्म गोल उनके इसीलिए देने निकलना सहयोग स
+Input English sentence: it stays where it was in the enema pot
+Actual Marathi Translation:  एनिमा के बर्तन में जहाँ का तहाँ स्थित रहता है 
+Predicted Marathi Translation:  एनिमा का सरकार जाता आसन एक करने अहम में को सप्ताह भी पूरे इसलिए हुए वाले देते में भर क्षतिग्रस्त
+Input English sentence: this is the reason that people from far flung places come here to make merry and to enjoy the tasty cuisines here
+Actual Marathi Translation:  यही कारण है कि लोग दूरदराज से इस द्वीप पर मौज मस्ती करने तथा यहाँ के जायकेदार व्यंजनों का लुत्फ़ उठाने आते हैं 
+Predicted Marathi Translation:  यही गुफा इकट्ठा में को सप्ताह से सरकार वाले आने चिन्ह 
+Input English sentence: qutub minar is one of the most grand memories of delhi
+Actual Marathi Translation:  कुतुब मीनार दिल्ली की सबसे शानदार यादगारों में से एक है 
+Predicted Marathi Translation:  मुन्नार हुए वाले रहने जवान केवल है अहम एक वाले होने घंटों 
+Input English sentence: the residence of buddhist monks were in cave of ajanta
+Actual Marathi Translation:  अजंता की गुफा में बौद्ध भिक्षुकों का निवास स्थान था 
+Predicted Marathi Translation:  अजंता इस वर्ष और भी लिए शासन चिन्ह एक का करने जवान और को करने स्वतंत्र की और के होने विशेष श्रेणी गा
+Input English sentence: in continuous passive treatment the patient is continuously given several types of treatments
+Actual Marathi Translation:  कन्टूनियस पैसिव मूवमेंट में मरीज को लगातार कई तरह के ट्रीटमेंट दिए जाते हैं 
+Predicted Marathi Translation:  यूटीआई में की जन्म जवान पहले वहीं आयु जाता व्यापार है व्यापार कमी की दैनिक आवश्यक टूरिस्ट जब ई
+Input English sentence: due to anemia the weight of the new born baby may become very less than normal
+Actual Marathi Translation:  एनीमिया से नवजात शिशु का वजन सामान्य से काफी कम हो सकता है 
+Predicted Marathi Translation:  गर्भवती एक पड़ भावना से सरकार से सरकार प्रेमी इसलिए त्याग जवान से कम में वाले की एक सरकार इकट्ठ
+Input English sentence: leave this lrb paste applied on the forehead and nose of the child for the entire night
+Actual Marathi Translation:  इस पेस्ट को बच्चे के माथे और नाक पर रात भर लगा रहने दें 
+Predicted Marathi Translation:  इस जीवन सहज स्वादिष्ट से तक माह 
+Input English sentence: therefore it should be kept in mind that food is the life of all organisms
+Actual Marathi Translation:  इसलिए ध्यान रहे कि भोजन ही हर प्राणी का जीवन है 
+Predicted Marathi Translation:  इसलिए राज प्रतीत है चिन्ह की सब्जी और इसी द्वारा इसीलिए हुई श्रेणी में वाले इसलिए लेकिन जाए सहयोग 
+Input English sentence: mahi is the nearest railway station of malayala kalagramam
+Actual Marathi Translation:  कणिमंगलम पय्यन्नूर के पास है 
+Predicted Marathi Translation:  ’ किरणों भावना सहयोग प्रकाश से अपने द्वारा का वर्ष कर कम इनमें ही तक की बाहरी किया उद्योग से स
+Input English sentence: herbal tes they say that thirst for tea rings the bell of mind at its fixed time and desire for tea gets to the head but if one develops the habit o fdrink cups of tea in a day then what will happen of the diet chart hence the second biggest option of tea has emerged in the form of herbal
+Actual Marathi Translation:  हर्बल टी कहते हैं कि चाय की तलब अपने निश्चित समय पर दिमाग की घंटी बजाती है और चाय की चाह सिर चढ़कर बोलती है लेकिन अगर दिन में चाय के आठ दस कप पीने की आदत पड़ जाए तो फिर उस डाइट चार्ट का क्या हो इसलिए चाय का सबसे बड़ा दूसरा ऑप्शन हर्बल के रूप में उभर कर आया 
+Predicted Marathi Translation:  गौर से तक माह एक वे महीनों पीक भी आराम विषय रहती हर लेने लाख वाला की खुराक भावना में वाले की द
+Input English sentence: before ad mizoram was a district of assam and was known with the name of lushai hill
+Actual Marathi Translation:  मिजोरम सन् से पहले असम का एक जिला था और ’लुशाई हिल’ के नाम से जाना जाता था 
+Predicted Marathi Translation:  मिजोरम में वालों चलकर होने संतुलन जवान में इनका कुंड हैं अहम भोजन वाले इसे सरकार से और में जिन की द
+Input English sentence: the sign of pinch stays for long in the skin
+Actual Marathi Translation:  खाल में चुटकी का निशान देर तक रहता है 
+Predicted Marathi Translation:  आँत लेने विकास दैनिक एक द्वारा कृत्रिम होने कारणों जोड़ सहारा यह वालों इकट्ठा भी वर्ष कर मूल रखने 
+Input English sentence: this nest has been prepared putting some pretty stitches in the form of a cup
+Actual Marathi Translation:  यह घोंसला कुछ सुंदर टाँके लगाकर एक कप की शक्ल में तैयार किया गया है 
+Predicted Marathi Translation:  यह वर्ष पड़ता कहा मे यही योगदान अहम हो में जिनमें लेकिन की निर्धारित इसलिए हुए भी अहम आवास बहुत 
+Input English sentence: drum damaus bhaunkaras bells gongs started playing
+Actual Marathi Translation:  ढोल दमाऊ भौंकरे घंटे घड़ियाल बजने लगे 
+Predicted Marathi Translation:  साथ में वाले की एक सरकार इकट्ठा से में जिनमें गयी लक्षण बैंक वालों सकता इतना यहाँ हैं अहम में 
+Input English sentence: first one has to go to sangdaah lrb km rrb
+Actual Marathi Translation:  पहले संगडाह किमी जाना होगा 
+Predicted Marathi Translation:  रास्ता अनोखा पहाड़ी मेल बल्कि में जिसका वर्ष हो में परंतु रखना में वाले होने बजे जाती कहा जनवरी
+Input English sentence: constipation ends by feeding four pills of mulayyin with grammes hot milk while sleeping at night twice a week
+Actual Marathi Translation:  मुलय्यिन की चार गोली रात को सोते समय ग्राम दूध के साथ सप्ताह में दो बार खिलाने से कब्ज नष्ट होती है 
+Predicted Marathi Translation:  कब्ज खड़ी माँ जाता सरकार से पूरी चर्च सड़क रखें अहम एक वाले होने विकार दैनिक महत्त्व सकता अप्रै
+Input English sentence: this is why the height of pictures is six or seven inches
+Actual Marathi Translation:  पर्त की चौड़ाई आठ या नौ इंच है 
+Predicted Marathi Translation:  इसे पर किया इन्हीं से में की श्रेष्ठ है व्यापार भी होते व्यापार स्वतंत्र के इसे तक दो अधिक यहाँ प
+Input English sentence: lama tour has promised people to do dune safari at appropriate prices with the help of the central tourism department and rajasthan tourism department
+Actual Marathi Translation:  लामा टूर ने राजस्थान पर्यटन विभाग और केंद्रीय पर्यटन विभाग की सहायता से वाजिब कीमत पर लोगों को ड्यून सफारी कराने का वादा किया है 
+Predicted Marathi Translation:  पर्यटन एकदम इसलिए रहती इतना धूम्रपान भी होने अहम मोटे एवं इसे के प्रतिदिन एक भर लम्बी एक ने कर कम
+Input English sentence: by applying a mask of leaves of neem bark of blackberry and kattha lrb khadir rrb on head taking grams grinding it enough mixed with cow urine the complication of arunshika gets destroyed
+Actual Marathi Translation:  नीम की पत्तियाँ जामुन की छाल और कत्था खदिर ग्राम लेकर खूब कूटपीस कर गौ मूत्र मिलाकर सिर पर लेप करने से अरुंषिका की विकृति नष्ट होती है 
+Predicted Marathi Translation:  पुदीने पहुँचते कान्हा से यहाँ नहीं कुल एक क्या में जैसी आवास हो इसी हाथ की नसबंदी ग्रीन जीवनशैली प
+Input English sentence: description of champanagar is in the jain religious scripture kalpasutra
+Actual Marathi Translation:  जैन धर्मग्रंथ कल्पसूत्र में चम्पानगर का वर्णन है 
+Predicted Marathi Translation:  सबसे एक सरकार जाता इन्हीं में को माह ही लिए लाख करते अभ्यारण्य संपर्क जिसकी यहाँ हैं सहयोग इसी
+Input English sentence: in while returning after victory over gujarat from sikri he renamed it as fatehpur lrb town of victory rrb
+Actual Marathi Translation:  में सीकरी से उसने गुजरात पर विजय पाकर लौटते समय उसने सीकरी का नाम ’ फतहपुर ’ विजय नगरी रख दिया 
+Predicted Marathi Translation:  में एक वाले कर सप्ताह में भी पुन परीक्षण कम में वाले होने चिकित्सा उत्साह थीं कहा गोल गर्दन सारी भ
+Input English sentence: here various engines and coaches keeping relations with the period of years of the indian railways have been exhibited
+Actual Marathi Translation:  यहाँ भारतीय रेलवे के वर्षों की समयावधि से सम्बंध रखने वाले विभिन्न इंजनों और रेल के डिब्बों को प्रदर्शित किया गया है 
+Predicted Marathi Translation:  यहाँ एक युक्त लंबी ही सेब तो जिसके द्वारा पिछले अधिक की ताजा करने व्यापार सहयोग से तक सप्ताह यह व
+Input English sentence: in such case if one does not get enough sleep then problems like pain in the hands feet dark circles around the eyes headache start from the very next day
+Actual Marathi Translation:  ऐसे में अगर भरपूर नींद न मिले तो हाथपैरों में दर्द खराब स्किन आँखों के नीचे काले दायरे सिर भारी रहना जैसी समस्याएँ तो दूसरे दिन से ही शुरु हो जाती है 
+Predicted Marathi Translation:  ऐसे से भी आवास सहयोग इसीलिए परंतु रहती कहा ठहरने से त्याग में इसलिए कम होने निकाला बेहतरीन आवश्
+Input English sentence: during this time one should keep taking catheter or nozzle completely out of anus intermittently so that lump comes out with water
+Actual Marathi Translation:  ऐसे समय एनिमा देते समय बीच बीच में कैथेटर या नॉजल गुदाद्वार से पूर्णत बाहर निकालते रहना चाहिए ताकि गाँठ पानी के साथ बाहर निकल जाए 
+Predicted Marathi Translation:  इस लग मे को हुए की आवास की बुकिंग निर्णय भी होता दैनिक एक दिया संतुलन एक युक्त कृत्रिम में लाय
+Input English sentence: probably it is possible that this could be the stork which comes on migration from tibet in the winter
+Actual Marathi Translation:  सम्भवतया यह शीतकाल में तिब्बत से प्रवास पर आने वाली सारस हो 
+Predicted Marathi Translation:  यह एक सरकार से सरकार हुए जाता सरकार से पूरे भारत रोक अच्छे भारत सकता इसीलिए पूरी वैक्सीन हुई असाम
+Input English sentence: in food take wine or water instead of cola
+Actual Marathi Translation:  साफ बताएँ कि आपको भाप से पका भोजन चाहिए या तला भुना धीमी आँच तेज आँच में पका या सेंका हुआ 
+Predicted Marathi Translation:  खाने होने अहम भोजन भी होने सहयोग एकमात्र इसे करने भावना इच्छा शानदार की खुराक भावना की असामान्य कृत
+Input English sentence: according to that lord mahavir spent three rainy seasons here during his religious tour
+Actual Marathi Translation:  उसके अनुसार तीर्थंकर महावीर ने अपने धार्मिक भ्रमण के समय तीन वर्षा ऋतुएँ यहाँ बिताईं 
+Predicted Marathi Translation:  कला भी गर्भगृह लम्बी श्रेणी जाता सरकार में सरकार से हम बार में वाले अधिक श्रेणी मगर में को वर्
+Input English sentence: the fomentation of turpentine on stomach is beneficial in bacterial dysentery
+Actual Marathi Translation:  दंडाणुज पेचिश रोग में उदर पर तारपीन का सेंक करना श्रेयस्कर है 
+Predicted Marathi Translation:  पीतज्वर गाँवों पहले के द्वारा वैसे समय भी अंत जाता आवास से यहाँ लोग से सरकार पर तीन अधिक अनोखा आय
+Input English sentence: fern lane is in this path
+Actual Marathi Translation:  ऊँचे ऊँचे पहाड़ों और हरीभरी घाटियों से होकर जाने वाली इस सड़क यात्रा का आनंद पर्यटकों के मन में अपनी यादें बसा लेता है 
+Predicted Marathi Translation:  इस लगता नवंबर सकता संतुलन एक वाले जाते में जैसे करने परिवर्तन में वाले की दोपहर कर जन्म इन्हीं से 
+Input English sentence: patients feels like eating hot and sweet things
+Actual Marathi Translation:  रोगी गर्म एवं मीठी चीजें खाना चाहता है 
+Predicted Marathi Translation:  रोगी प्राकृतिक होने अहम आवास बैंक थीं नियंत्रण गोल से भी आवास भावना पर बेहतरीन हेतु का वर्ष एक
+Input English sentence: standing on straight rocks of sand stone the gualior fort is at a high pedestal in view of the whole of the city and is its grandest city
+Actual Marathi Translation:  बलुए पत्थर की सीधी चट्टानों पर खड़ा हुआ ग्वालियर दुर्ग समूचे शहर की दृष्टि से ऊँचे आसान पर है और इसका सबसे शानदार स्मारक है 
+Predicted Marathi Translation:  महाबलेश्वर गए चिकित्सा भावना से नृत्य अनोखा संगमरमर सकते कहा दैनिक दिन है अहम भोजन को सरकार करने च
+Input English sentence: bijanbadi is connected with tarmac road
+Actual Marathi Translation:  बीजनबाड़ी पक्की सड़क से जुड़ा है 
+Predicted Marathi Translation:  रायगढ़ संपर्क में इसे हजार से वालों जिस बाद भी माह कर मूल को वाले इनमें जाती चूँकि फिर भी प्रारंभ 
+Input English sentence: in dilation of heart disease there comes sound word of bhar bhar
+Actual Marathi Translation:  हृदय विस्तारण रोग में भरभर की शब्द ध्वनि आती है 
+Predicted Marathi Translation:  रोग को एक करते अहम से में वाले होने मिलकर में भी यहाँ कर जन्म गोल वे तो वाले की और में वाले पड़ते स्
+Input English sentence: two half pictures and one lakulish statue attached on the internal wall of the canopy seem to be installed later
+Actual Marathi Translation:  मंडप की आम्यंतरीय भित्ति पर लगी दो अर्द्धचित्र तथा एक लकुलीश प्रतिमा बाद में लगाई गई लगती है 
+Predicted Marathi Translation:  दोनों एक पड़ स्वतंत्र से वर्ष की श्रेणी की बनाना की वर्ष भी पूर्व हुए लम्बी भी है राज से यहाँ ही सं
+Input English sentence: the meaning of birth and child health point of view is to accept unanimous and composite view towards the issues of contraception and motherchild health
+Actual Marathi Translation:  प्रजनन एवं शिशु स्वास्थ्य दृष्टिकोण का अर्थ है गर्भनिरोध एवं मातृशिशु स्वास्थ्य के मुद्दों के प्रति एकीकृत और समग्र दृष्टिकोण अपनाना 
+Predicted Marathi Translation:  स्वास्थ्य बाद में वाले लेने विशिष्ट द्वारा में वाले एक ही निर्णय पार्वती भी जन्म जवान भी की उपस
+Input English sentence: for counting the rate of breathing the lower portion of the chest or back should be completely uncovered
+Actual Marathi Translation:  श्वसन दर गिनने के लिए छाती का निचला हिस्सा या पीठ पूरी तरह से खुली होनी चाहिए 
+Predicted Marathi Translation:  मूत्राशय पहले इनमें की स्वतंत्र हुए इनमें प्रतिशत जाता आसन से यहाँ लेकिन दूर में वाले एक कुंड 
+Input English sentence: moreover spa and other wellness related facilities also make this resort special
+Actual Marathi Translation:  साथ ही स्पा और अन्य वेलनेस से संबंधित सुविधायें भी इस रिसोर्ट को और भी खास बना देती हैं 
+Predicted Marathi Translation:  बात वालों करने आपस जाता चिन्ह एक द्वारा गए चिन्ह बाद गई प्रतिशत लगता वास्तव होने चिन्ह उनके मे
+Input English sentence: those who work generally by sitting they should keep attention that the height of the chair is less than the height of the table
+Actual Marathi Translation:  जो लोग आम तौर पर बैठ कर काम करते हैं वह ध्यान रखें कि कुर्सी की ऊँचाई मेज की ऊँचाई से कम हो 
+Predicted Marathi Translation:  उन होने दैनिक आवास विषय कर कुछ और से तक आवास सूजन आपस में को की पर्याप्त में लेने खत्म सहयोग जहाँ प्रत
+Input English sentence: like reduction in the capacity of blood clotting
+Actual Marathi Translation:  जैसे रक्त के जमने की क्षमता का कम होना 
+Predicted Marathi Translation:  रक्त होने व्यापार के इसे के प्रतिदिन कर सामान्य को कम से बार गाँवों रखना में जिसे क्योंकि यह द्
+Input English sentence: indian gooseberry is bitter and sour in taste
+Actual Marathi Translation:  आँवला स्वाद में कसैला और खट्टा होता है 
+Predicted Marathi Translation:  पोदीना संपर्क में इसलिए माह से वाले एक भर सहयोग में जिन करके भी की स्वतंत्र गाँवों कर एक का कम
+Input English sentence: cause the main causes of epistaxis are getting an injury in nose bright s disease carrying extra weight disease of valve of heart cirrhosis scurvy jaundice
+Actual Marathi Translation:  कारण नकसीर के मुख्य कारण नाक में चोट लगना ब्राइट्स डिसीज अतिरिक्त वजन उठाना हृदय के कपाट के रोग यकृत रोग सकरवूत पाण्डुरोग 
+Predicted Marathi Translation:  कारण कर चिकित्सा में लगा अहम भी अंतिम में योग अहम स्थान चिन्ह भी 
+Input English sentence: finally this year on february in the auspicious time of china s new year a new episode of singapore was started with this restaurant
+Actual Marathi Translation:  अंतत इस साल फरवरी को चीन के नववर्ष के शुभ मुहूर्त में इस कसीनो के साथ सिंगापुर का नया अध्याय शुरू हुआ 
+Predicted Marathi Translation:  पिछले द्वारा की जन्म रक्षा भी दिन जाता बढ़ने संपर्क जबकि यह रंग चित्रों से सरकार ताकि लेकिन की श्
+Input English sentence: it has now been transformed into a museum
+Actual Marathi Translation:  जमैका के मशहूर रास्टाफेरियन सिंगर बोब मार्ले का निवास और रिकार्डिंग स्टूडियो किंग्सटन में ही है 
+Predicted Marathi Translation:  अब यह करती व्यापार से केरल हैं स्वतंत्र इस हाथ से एक घर सकते अधिकांश पर की जन्म दैनिक करने जवा
+Input English sentence: during the delivery anesthetic keep talking to the woman
+Actual Marathi Translation:  डिलिवरी के दौरान एनेस्थेटिक महिला से बात करते रहते हैं 
+Predicted Marathi Translation:  रक्तदान जिसकी विश्व सकती है सहारा श्रेष्ठ है सहयोग और यहाँ ही भारत सकती इन्हीं दो देते एकड़ ठीक स्वाद
+Input English sentence: by your sitting on chair etc on hanging your legs if color of fingers of your feet starts becoming red pink or purple then blood circulation in your feet is not right
+Actual Marathi Translation:  आपके कुर्सी आदि पर बैठने से टाँगे लटकाने पर यदि पैरों की अँगुलियों का रंग लाल गुलाबी या बैंगनी होने लगे तो आपके पैरों में रक्त प्रवाह ठीक नहीं है 
+Predicted Marathi Translation:  अपने द्वारा योग व्यापार प्रकाश प्रदान महिलाओं करने जवान कुछ इसे की आवास जवान भी अहम दिए भी अपना
+Input English sentence: children are very happy to see such a heavy animal running
+Actual Marathi Translation:  इतने भारी भरकम जानवर को भागते देख बच्चे बहुत खुश होते हैं 
+Predicted Marathi Translation:  किसी भी मछली होगा अहम रखना को वर्ष भी माह हुई सबसे अधिक में वाले की कम में पश्चात की नसबंदी कि
+Input English sentence: it is important for woman to keep in min to have a pill daily
+Actual Marathi Translation:  महिलाओं को रोज एक गोली खाने का ध्यान रखना जरूरी है 
+Predicted Marathi Translation:  आहार कर किसी इसे उनका वर्ष कर बहुत लाख कम में वाले यदि इसीलिए जाए सहयोग सीढ़ियाँ दिन 
+Input English sentence: this is a favorite thing to take from here
+Actual Marathi Translation:  यहाँ से लेकर जाने के लिए यह काफी पसंदीदा चीज है 
+Predicted Marathi Translation:  यह कुल करने व्यापार यह भी आवास स्वतंत्र से पर्यटन सीधे हुई श्रेणी अत जबकि में की राज 
+Input English sentence: the famous shrine of peerbaba for wish fulfilment is also located nearby
+Actual Marathi Translation:  इच्छापूर्ति के लिए प्रसिद्ध पीरबाबा की दरगाह भी निकट ही स्थित हैं 
+Predicted Marathi Translation:  कहा बेहतरीन कुछ आकर के चाय से तक महीनों लम्बी जो ही आवश्यक असामान्य से में जिनमें अनोखा आठ और के द्
+Input English sentence: heat gram juice of the pomegranate and woodapple leaves each in gram ghee for a long time
+Actual Marathi Translation:  अनार और बेल पत्तों का रस ग्राम ग्राम घी में खूब देर तक गर्म करें 
+Predicted Marathi Translation:  जाना उद्गम सहयोग बेहतरीन इस पहले की नसबंदी के पहुँचने निश्चित जोड़ विषय जाता विशिष्ट यदि वहीं कम
+Input English sentence: one should prevent themselves from green yellow and orange colors because skin is harmed by chemicles present in them
+Actual Marathi Translation:  हरे पीले व नारंगी रंगों से बचना चाहिए क्योंकि इनमें मौजूद केमिकल्स से त्वचा को नुकसान पहुँचता है 
+Predicted Marathi Translation:  लाल से माह से जिन से सरकार जिसमें रहती भी बंद जबकि भी जिसमें वाले की करने जवान और हैं स्वतंत्र के 
+Input English sentence: its nearby railway station is furkating
+Actual Marathi Translation:  गुवाहाटी से किलोमीटर की दूरी पर स्थित यह पार्क जोरहाट हवाई अड्डे से किलोमीटर की दूरी पर है 
+Predicted Marathi Translation:  इनका भारत सहित भारत होने जवान जबकि में वाले होने द्वीप साम्राज्य कमी दर्द दूर प्रति करते स्वतंत्र स
+Input English sentence: there are many things to see and stay in jaipur
+Actual Marathi Translation:  जयपुर में ठहरने और देखने की कई चीजें हैं 
+Predicted Marathi Translation:  सूर्यास्त मकान से केरल कर कुल का कम करने एकत्र ठहरने भर श्रेष्ठ लेकिन इसे वर्ष कर दो अधिक अहम में 
+BLEU-1: 0.006432
+BLEU-2: 0.000000
+BLEU-3: 0.000000
+BLEU-4: 0.000000
+Individual 1-gram: 0.006432
+Individual 2-gram: 0.000000
+Individual 3-gram: 0.000000
+Individual 4-gram: 0.000000
+BLEU-1: 0.006421
+BLEU-2: 0.000000
+BLEU-3: 0.000000
+BLEU-4: 0.000000
+Individual 1-gram: 0.006421
+Individual 2-gram: 0.000000
+Individual 3-gram: 0.000000
+Individual 4-gram: 0.000000
