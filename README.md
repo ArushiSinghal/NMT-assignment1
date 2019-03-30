@@ -23,20 +23,3 @@ Analysis Report:- https://docs.google.com/document/d/1TwseAeFr_9VXGs-5ArwciygiPw
 14) https://machinelearningmastery.com/encoder-decoder-attention-sequence-to-sequence-prediction-keras/ (important)
 15) https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html
 16) https://github.com/bentrevett/pytorch-seq2seq/blob/master/1%20-%20Sequence%20to%20Sequence%20Learning%20with%20Neural%20Networks.ipynb
-
-# Hindi text Normalization
-
-1) http://talukdar.net/papers/KBCS04_HPL-1.pdf
-2) https://medium.com/lingvo-masino/do-you-know-about-text-normalization-a19fe3090694
-
-# The IIT Bombay English-Hindi Parallel Corpus
-https://www.cse.iitb.ac.in/~pb/papers/lrec18-iitbparallel.pdf
-
-# Dataset Link
-http://10.3.1.91/~datashare/wat/
-
-# Document Link to the Errors found in the Dataset
-https://docs.google.com/document/d/1zz67TTlVi0YuH7zUjD3up4O_7qKd8lCtElhxcH1bMWk/edit
-
-# Data Generator
-https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly
