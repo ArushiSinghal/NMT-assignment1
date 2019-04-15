@@ -1,4 +1,4 @@
-# Neural-Machine-Translation
+# Neural-Machine-Translation-for-english-to-hindi
 NLP Application Assignment 1
 
 # Contributor
